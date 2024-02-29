@@ -1,5 +1,6 @@
 # from dotenv import load_dotenv
 # load_dotenv()
+
 from langchain_openai import ChatOpenAI
 import streamlit as st
 
@@ -13,6 +14,6 @@ content = st.text_input('어떤 블로그 주제가 좋을까요?')
 
 if st.button('주제 제안받기'):
     with st.spinner('주제 고민 중...'):
-        result = llm.invoke(content + "에 대한 블로그 주제를 써줘")
+        result = llm.invoke(content + "에 대한 블로그 주제를 여러가지 제안해줘!")
         st.write(result)
     
